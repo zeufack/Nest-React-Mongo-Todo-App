@@ -15,6 +15,7 @@ Vous trouverez dans ce dossier ma proposition pour l'exercice consitant à crée
         - `npm install`
         - `touch .env`: editer le fichier  `.env` et ajouter la variable `DATABASE_URL="lien vers monogodb"`
         - `nest start`
+        -  sever run on port 5000
     - Demarrer le client:
         - `cd todo-showcase`
         - `npm install`
