@@ -1,0 +1,65 @@
+.todo-list-item {
+  padding: 17px 17px;
+  border: 1px solid #ccc;
+  background-color: var(--task-bg-color);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  vertical-align: center;
+  transition: all 0.5s;
+}
+.todo-list-item > p {
+  color: black;
+}
+.todo-list-item:hover {
+  transform: scale(1.02, 1.02);
+  font-size: 17px;
+  z-index: 1;
+}
+.todo-list-item:hover .delete {
+  display: block;
+}
+
+.complete {
+  background: linear-gradient(#72bbfc, #af6df4);
+  padding: 1px 4px;
+  border-radius: 50% !important;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.uncomplete {
+  border: 2px solid var(--todo-footer-text-color);
+  padding: 1px 4px;
+  border-radius: 50% !important;
+  width: 7px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+/* 
+    .complete {
+      top: 30%;
+      right: 13%;
+    }
+    
+    .task {
+      top: 0;
+    } */
+
+.delete {
+  position: absolute;
+  top: 30%;
+  right: 0%;
+  padding: 1px 4.5px;
+  border-radius: 50% !important;
+  margin-right: 10px;
+  overflow: hidden;
+  object-fit: contain;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 626px) {
+  .delete {
+    display: block;
+  }
+}

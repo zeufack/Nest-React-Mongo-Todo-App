@@ -1,0 +1,207 @@
+/** main wrapper **/
+
+.main-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: var(--main-bg-color);
+}
+
+/* Wrapper content */
+
+.main-wrapper-content {
+  height: inherit;
+  width: inherit;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  display: grid;
+  place-items: center;
+}
+
+/** Add background image and background color **/
+
+.main-wrapper-bg {
+  height: 100%;
+}
+
+.main-wrapper-bg-header {
+  background: url("./bg/bg-desktop-light.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+}
+
+/** todo **/
+
+.todo-wrapper {
+  width: 40%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+/** todo header **/
+.todo-header {
+  padding-top: 25px;
+}
+
+.todo-title {
+  font-family: "Roboto", sans-serif;
+  color: var(--todo-title-color);
+  font-size: 30px;
+  letter-spacing: 7px;
+  font-weight: 600;
+}
+/** End Todo header **/
+/** Todo Input **/
+
+.todo-input-wrapper {
+  position: relative;
+}
+#todo-input {
+  width: 100%;
+  padding: 17px 45px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  /* position: relative; */
+}
+.input-icon {
+  position: absolute;
+  border: 2px solid var(--todo-footer-text-color);
+  border-radius: 50% !important;
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+  cursor: pointer;
+  top: 36%;
+  left: 3%;
+}
+#todo-input:focus {
+  outline: none !important;
+  font-family: "Roboto", sans-serif;
+}
+
+/*End todo input */
+
+/** Todo List **/
+
+.todo-list :first-child {
+  border-radius: 8px 8px 0px 0px;
+}
+
+.todo-list :last-child {
+  border-radius: 0px 0px 4px 4px;
+}
+
+/** End Todo List /** 
+  
+  
+  
+  /** Navigations **/
+.todo-list-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 17px 10px;
+  background: var(--task-bg-color);
+  border: 1px solid #ccc;
+  color: var(--navigation-item-color);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.todo-list-ngt-item {
+  transition: 0.5s;
+}
+.todo-list-ngt-item:hover {
+  transform: scale(1.07);
+  color: blueviolet;
+}
+
+/* .todo-list-ngt-item a {
+    color: var(--navigation-item-color);
+  } */
+
+/* end Todo navigation */
+
+/** footer text**/
+
+.todo-footer p {
+  color: var(--todo-footer-text-color);
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  padding-top: 25px;
+}
+
+/* end footer text **/
+
+/* End main wrapper*/
+/* use background for phone device */
+@media (min-width: 626px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+@media (max-width: 360px) {
+  .main-wrapper-bg-header {
+    background: url("../todo/bg/bg-mobile-light.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+  }
+}
+
+@media (max-width: 1212px) {
+  .todo-wrapper {
+    width: 50%;
+  }
+}
+
+@media (max-width: 898px) {
+  .todo-wrapper {
+    width: 70%;
+  }
+}
+
+@media (max-width: 626px) {
+  * {
+    font-size: 14px;
+  }
+
+  .todo-wrapper {
+    width: 90%;
+  }
+
+  .todo-list-item {
+    padding: 17px 10px;
+  }
+
+  .complete,
+  .uncumplete {
+    padding: 1px 3.5px !important;
+  }
+  .todo-list-navigation {
+    display: none;
+  }
+
+  /* mobile navigation */
+
+  .mobile-nav-task {
+    justify-content: space-between;
+  }
+
+  .mobile-nav-actions {
+    margin-top: 20px;
+    justify-content: space-around;
+    border-radius: 8px;
+  }
+
+  .todo-footer p {
+    padding-top: 23px;
+  }
+}
