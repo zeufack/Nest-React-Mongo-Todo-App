@@ -9,12 +9,12 @@ Vous trouverez dans ce dossier ma proposition pour l'exercice consitant à crée
 
 - Installation
     faire une copie de cette application:
-    -`git clone https://github.com/zeufack/Nest-React-Mongo-Todo-App.git`
+    - `git clone https://github.com/zeufack/Nest-React-Mongo-Todo-App.git`
     Demarrer le serveur: 
         - `cd todo-backend`
         - `npm install`
         - `touch .env`: editer le fichier  `.env` et ajouter la variable `DATABASE_URL="lien vers monogodb"`
-        -  `nest start`
+        - `nest start`
     Demarrer le client:
         - `cd todo-showcase`
         - `npm install`
